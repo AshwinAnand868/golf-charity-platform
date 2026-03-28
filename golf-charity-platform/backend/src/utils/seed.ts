@@ -2,9 +2,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import mongoose from 'mongoose';
-import { User } from '../models/User';
 import { Charity } from '../models/Charity';
 import { UserScores } from '../models/Score';
+import { User } from '../models/User';
 
 async function seed() {
   await mongoose.connect(process.env.MONGODB_URI as string);
@@ -133,7 +133,7 @@ async function seed() {
   console.log(`✅ Created player: player@golfcharity.com / Player@1234`);
 
   await mongoose.disconnect();
-  console.log('🌱 Seeding complete!');
+  console.log('Seeding complete!');
 }
 
 seed().catch(console.error);
