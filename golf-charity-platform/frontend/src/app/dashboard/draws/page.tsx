@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuthStore } from '@/store/authStore';
 import { Navbar } from '@/components/Navbar';
-import Link from 'next/link';
 import api from '@/lib/api';
+import { useAuthStore } from '@/store/authStore';
+import { ArrowLeft, CheckCircle, Clock, Star, Trophy, Upload, XCircle } from 'lucide-react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { ArrowLeft, Trophy, Star, Upload, CheckCircle, Clock, XCircle } from 'lucide-react';
 
 interface Winner {
   user: string;

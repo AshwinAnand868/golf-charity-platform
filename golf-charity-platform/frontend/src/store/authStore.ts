@@ -1,14 +1,15 @@
-import { create } from 'zustand';
-import api from '@/lib/api';
+import api from "@/lib/api";
+import { create } from "zustand";
 
 interface User {
-  id: string;
+  _id: string; // ✅ ADD THIS
+  id?: string; // optional (keep if already used elsewhere)
   name: string;
   email: string;
-  role: 'user' | 'admin';
+  role: "user" | "admin";
   subscription: {
-    status: 'active' | 'inactive' | 'cancelled' | 'lapsed';
-    plan: 'monthly' | 'yearly' | null;
+    status: "active" | "inactive" | "cancelled" | "lapsed";
+    plan: "monthly" | "yearly" | null;
     currentPeriodEnd: string | null;
     cancelAtPeriodEnd: boolean;
   };
@@ -35,9 +36,9 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   isInitialized: false,
 
   initialize: () => {
-    if (typeof window === 'undefined') return;
-    const token = localStorage.getItem('token');
-    const userStr = localStorage.getItem('user');
+    if (typeof window === "undefined") return;
+    const token = localStorage.getItem("token");
+    const userStr = localStorage.getItem("user");
     if (token && userStr) {
       try {
         const user = JSON.parse(userStr);
@@ -53,9 +54,9 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   login: async (email, password) => {
     set({ isLoading: true });
     try {
-      const { data } = await api.post('/auth/login', { email, password });
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user));
+      const { data } = await api.post("/auth/login", { email, password });
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
       set({ user: data.user, token: data.token, isLoading: false });
     } catch (error) {
       set({ isLoading: false });
@@ -66,9 +67,13 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   register: async (name, email, password) => {
     set({ isLoading: true });
     try {
-      const { data } = await api.post('/auth/register', { name, email, password });
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user));
+      const { data } = await api.post("/auth/register", {
+        name,
+        email,
+        password,
+      });
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
       set({ user: data.user, token: data.token, isLoading: false });
     } catch (error) {
       set({ isLoading: false });
@@ -77,16 +82,16 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   },
 
   logout: () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     set({ user: null, token: null });
-    window.location.href = '/';
+    window.location.href = "/";
   },
 
   refreshUser: async () => {
     try {
-      const { data } = await api.get('/auth/me');
-      localStorage.setItem('user', JSON.stringify(data.user));
+      const { data } = await api.get("/auth/me");
+      localStorage.setItem("user", JSON.stringify(data.user));
       set({ user: data.user });
     } catch {
       // Token expired
