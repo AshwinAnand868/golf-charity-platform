@@ -36,10 +36,10 @@ export default function AdminPage() {
   ];
 
   const colorMap: Record<string, string> = {
-    blue: 'bg-blue-500/15 text-blue-400',
-    gold: 'bg-gold-500/15 text-gold-400',
-    red: 'bg-red-500/15 text-red-400',
-    green: 'bg-brand-500/15 text-brand-400',
+    blue: 'bg-blue-500/10 text-blue-400',
+    gold: 'bg-gold-500/10 text-gold-400',
+    red: 'bg-red-500/10 text-red-400',
+    green: 'bg-brand-500/10 text-brand-400',
   };
 
   return (

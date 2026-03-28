@@ -58,7 +58,7 @@ export default function SubscribePage() {
       <Navbar />
       <div className="pt-28 pb-20 px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <div className="w-16 h-16 bg-brand-500/15 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div className="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <Trophy className="w-8 h-8 text-brand-400" />
           </div>
           <h1 className="font-display text-4xl font-bold text-white mb-3">Choose Your Plan</h1>
@@ -72,7 +72,7 @@ export default function SubscribePage() {
               onClick={() => setSelectedPlan(plan.id)}
               className={`card text-left transition-all duration-200 relative ${
                 selectedPlan === plan.id
-                  ? 'border-brand-500/50 bg-brand-500/8 shadow-[0_0_30px_rgba(34,197,94,0.1)]'
+                  ? 'border-brand-500/50 bg-brand-500/10 shadow-[0_0_30px_rgba(34,197,94,0.1)]'
                   : 'hover:border-white/20'
               }`}
             >

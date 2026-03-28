@@ -108,7 +108,7 @@ export default function LoginPage() {
           </p>
 
           {/* Demo credentials */}
-          <div className="mt-6 p-4 rounded-xl bg-white/4 border border-white/8">
+          <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
             <p className="text-xs text-slate-500 font-medium mb-2">🧪 Demo credentials</p>
             <div className="space-y-1 text-xs text-slate-400">
               <p><span className="text-slate-300">Player:</span> player@golfcharity.com / Player@1234</p>

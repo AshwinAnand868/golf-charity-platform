@@ -54,7 +54,7 @@ export default function DashboardPage() {
 
           {/* Status Banner */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-            <div className="card bg-brand-500/8 border-brand-500/20">
+            <div className="card bg-brand-500/10 border-brand-500/20">
               <div className="text-xs text-slate-400 mb-1">Subscription</div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-brand-400 animate-pulse" />
@@ -99,7 +99,7 @@ export default function DashboardPage() {
           {/* Quick Actions */}
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             <Link href="/dashboard/scores" className="card-hover group">
-              <div className="w-11 h-11 bg-brand-500/15 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-500/25 transition-colors">
+              <div className="w-11 h-11 bg-brand-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-500/20 transition-colors">
                 <TrendingUp className="w-5 h-5 text-brand-400" />
               </div>
               <h3 className="font-semibold text-white mb-1">My Scores</h3>
@@ -110,7 +110,7 @@ export default function DashboardPage() {
             </Link>
 
             <Link href="/dashboard/charity" className="card-hover group">
-              <div className="w-11 h-11 bg-red-500/15 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-500/25 transition-colors">
+              <div className="w-11 h-11 bg-red-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-500/20 transition-colors">
                 <Heart className="w-5 h-5 text-red-400" />
               </div>
               <h3 className="font-semibold text-white mb-1">My Charity</h3>
@@ -121,7 +121,7 @@ export default function DashboardPage() {
             </Link>
 
             <Link href="/dashboard/draws" className="card-hover group">
-              <div className="w-11 h-11 bg-gold-500/15 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold-500/25 transition-colors">
+              <div className="w-11 h-11 bg-gold-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold-500/20 transition-colors">
                 <Trophy className="w-5 h-5 text-gold-400" />
               </div>
               <h3 className="font-semibold text-white mb-1">Draw Results</h3>

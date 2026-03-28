@@ -125,7 +125,7 @@ export default function CharityPage() {
                   onClick={() => setSelected(c._id)}
                   className={`card text-left transition-all duration-200 relative ${
                     selected === c._id
-                      ? 'border-brand-500/50 bg-brand-500/8'
+                      ? 'border-brand-500/50 bg-brand-500/10'
                       : 'hover:border-white/20'
                   }`}
                 >

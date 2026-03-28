@@ -97,7 +97,7 @@ export default function AdminWinnersPage() {
                 key={t.id}
                 onClick={() => setFilter(t.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap transition-all ${
-                  filter === t.id ? 'bg-brand-500/15 text-brand-400 border border-brand-500/25' : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  filter === t.id ? 'bg-brand-500/10 text-brand-400 border border-brand-500/20' : 'text-slate-400 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {t.label}
@@ -167,13 +167,13 @@ export default function AdminWinnersPage() {
                         <>
                           <button
                             onClick={() => verify(w.drawId, w.user._id, 'approve')}
-                            className="flex items-center gap-1.5 px-3 py-2 bg-brand-500/15 text-brand-400 hover:bg-brand-500/25 rounded-lg text-sm font-medium transition-colors"
+                            className="flex items-center gap-1.5 px-3 py-2 bg-brand-500/10 text-brand-400 hover:bg-brand-500/20 rounded-lg text-sm font-medium transition-colors"
                           >
                             <CheckCircle className="w-4 h-4" /> Approve
                           </button>
                           <button
                             onClick={() => verify(w.drawId, w.user._id, 'reject')}
-                            className="flex items-center gap-1.5 px-3 py-2 bg-red-500/15 text-red-400 hover:bg-red-500/25 rounded-lg text-sm font-medium transition-colors"
+                            className="flex items-center gap-1.5 px-3 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 rounded-lg text-sm font-medium transition-colors"
                           >
                             <XCircle className="w-4 h-4" /> Reject
                           </button>
@@ -182,7 +182,7 @@ export default function AdminWinnersPage() {
                       {w.verificationStatus === 'approved' && w.paymentStatus !== 'paid' && (
                         <button
                           onClick={() => markPaid(w.drawId, w.user._id)}
-                          className="flex items-center gap-1.5 px-3 py-2 bg-gold-500/15 text-gold-400 hover:bg-gold-500/25 rounded-lg text-sm font-medium transition-colors"
+                          className="flex items-center gap-1.5 px-3 py-2 bg-gold-500/10 text-gold-400 hover:bg-gold-500/20 rounded-lg text-sm font-medium transition-colors"
                         >
                           <DollarSign className="w-4 h-4" /> Mark Paid
                         </button>

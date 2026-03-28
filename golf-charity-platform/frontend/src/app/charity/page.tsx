@@ -58,7 +58,7 @@ export default async function CharitiesPage() {
                           <span className="text-slate-500 text-xs">{c.category}</span>
                         </div>
                         {c.events?.length > 0 && (
-                          <div className="mt-3 pt-3 border-t border-white/8">
+                          <div className="mt-3 pt-3 border-t border-white/10">
                             <p className="text-xs text-slate-500 mb-1">Upcoming Events</p>
                             {c.events.slice(0, 1).map((ev: any, i: number) => (
                               <p key={i} className="text-xs text-slate-300">{ev.title} — {new Date(ev.date).toLocaleDateString()}</p>
@@ -82,7 +82,7 @@ export default async function CharitiesPage() {
                   {c.logo ? (
                     <img src={c.logo} alt={c.name} className="w-12 h-12 rounded-xl object-cover flex-shrink-0" />
                   ) : (
-                    <div className="w-12 h-12 rounded-xl bg-brand-500/15 flex items-center justify-center text-2xl flex-shrink-0">💚</div>
+                    <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center text-2xl flex-shrink-0">💚</div>
                   )}
                   <div>
                     <h3 className="font-semibold text-white">{c.name}</h3>
@@ -90,7 +90,7 @@ export default async function CharitiesPage() {
                   </div>
                 </div>
                 <p className="text-sm text-slate-400 line-clamp-3 mb-4">{c.description}</p>
-                <div className="flex items-center justify-between pt-3 border-t border-white/8">
+                <div className="flex items-center justify-between pt-3 border-t border-white/10">
                   <span className="text-brand-400 text-sm font-medium">
                     £{(c.totalReceived / 100).toLocaleString()} raised
                   </span>
@@ -108,7 +108,7 @@ export default async function CharitiesPage() {
           )}
 
           {/* CTA */}
-          <div className="mt-20 card text-center py-16 bg-brand-500/5 border-brand-500/15">
+          <div className="mt-20 card text-center py-16 bg-brand-500/5 border-brand-500/10">
             <h2 className="font-display text-3xl font-bold text-white mb-4">Ready to play for good?</h2>
             <p className="text-slate-400 mb-8">Join GolfGives and choose a charity to support with every subscription.</p>
             <Link href="/auth/register" className="btn-primary text-lg px-8 py-4 glow">

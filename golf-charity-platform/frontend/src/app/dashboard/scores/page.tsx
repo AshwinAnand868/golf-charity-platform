@@ -105,7 +105,7 @@ export default function ScoresPage() {
           </div>
 
           {/* Info card */}
-          <div className="card bg-brand-500/5 border-brand-500/15 flex items-start gap-3 mb-8">
+          <div className="card bg-brand-500/5 border-brand-500/10 flex items-start gap-3 mb-8">
             <Info className="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" />
             <p className="text-sm text-slate-400">
               Your scores (1–45, Stableford format) act as your draw entry numbers each month. 
@@ -218,7 +218,7 @@ export default function ScoresPage() {
                         )}
                       </div>
                       <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button onClick={() => startEdit(idx, score)} className="p-2 text-slate-400 hover:text-white hover:bg-white/8 rounded-lg transition-all">
+                        <button onClick={() => startEdit(idx, score)} className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-all">
                           <Pencil className="w-4 h-4" />
                         </button>
                         <button onClick={() => handleDelete(idx)} className="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-all">

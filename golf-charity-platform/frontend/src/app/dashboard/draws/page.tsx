@@ -185,7 +185,7 @@ export default function DrawsPage() {
                   {/* Drawn numbers */}
                   <div className="flex gap-2 mb-4">
                     {draw.drawnNumbers.map((n) => (
-                      <div key={n} className="w-10 h-10 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center font-bold text-brand-300 text-sm">
+                      <div key={n} className="w-10 h-10 rounded-full bg-brand-500/10 border border-brand-500/30 flex items-center justify-center font-bold text-brand-300 text-sm">
                         {n}
                       </div>
                     ))}
@@ -198,7 +198,7 @@ export default function DrawsPage() {
                       { label: '🥈 4-Match', value: draw.prizePool.fourMatch },
                       { label: '🥉 3-Match', value: draw.prizePool.threeMatch },
                     ].map(({ label, value }) => (
-                      <div key={label} className="p-3 rounded-xl bg-white/4 border border-white/8">
+                      <div key={label} className="p-3 rounded-xl bg-white/5 border border-white/10">
                         <div className="text-xs text-slate-400">{label}</div>
                         <div className="font-semibold text-white mt-1">£{(value / 100).toFixed(0)}</div>
                       </div>

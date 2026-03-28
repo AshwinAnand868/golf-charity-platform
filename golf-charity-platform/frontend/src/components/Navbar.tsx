@@ -21,7 +21,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/8 bg-dark-950/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-dark-950/80 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -43,7 +43,7 @@ export function Navbar() {
                 className={clsx(
                   'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
                   isActive(href)
-                    ? 'bg-brand-500/15 text-brand-400'
+                    ? 'bg-brand-500/10 text-brand-400'
                     : 'text-slate-400 hover:text-white hover:bg-white/5'
                 )}
               >
@@ -73,7 +73,7 @@ export function Navbar() {
                       <p className="text-xs text-slate-500">{user.email}</p>
                       <div className={clsx(
                         'mt-1.5 inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full',
-                        user.subscription.status === 'active' ? 'bg-brand-500/15 text-brand-400' : 'bg-red-500/15 text-red-400'
+                        user.subscription.status === 'active' ? 'bg-brand-500/10 text-brand-400' : 'bg-red-500/10 text-red-400'
                       )}>
                         {user.subscription.status === 'active' ? '● Active' : '● Inactive'}
                       </div>
@@ -117,7 +117,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-white/8 bg-dark-900/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-white/10 bg-dark-900/95 backdrop-blur-xl">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map(({ href, label, icon: Icon }) => (
               <Link key={href} href={href} onClick={() => setMobileOpen(false)}

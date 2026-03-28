@@ -102,7 +102,7 @@ export default function AdminUsersPage() {
           <div className="card overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/8">
+                <tr className="border-b border-white/10">
                   {['User', 'Status', 'Plan', 'Charity', 'Joined', 'Actions'].map((h) => (
                     <th key={h} className="text-left py-3 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">{h}</th>
                   ))}

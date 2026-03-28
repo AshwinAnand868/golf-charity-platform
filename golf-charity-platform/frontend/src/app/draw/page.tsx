@@ -34,7 +34,7 @@ export default async function DrawPage() {
           </div>
 
           {/* How the draw works */}
-          <div className="card mb-16 bg-gold-500/5 border-gold-500/15">
+          <div className="card mb-16 bg-gold-500/5 border-gold-500/10">
             <h2 className="font-semibold text-white mb-6">How the Draw Works</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -85,7 +85,7 @@ export default async function DrawPage() {
                   </div>
                   <div className="flex gap-2 mb-4">
                     {d.drawnNumbers.map((n: number) => (
-                      <div key={n} className="w-10 h-10 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center font-bold text-brand-300 text-sm">
+                      <div key={n} className="w-10 h-10 rounded-full bg-brand-500/10 border border-brand-500/30 flex items-center justify-center font-bold text-brand-300 text-sm">
                         {n}
                       </div>
                     ))}

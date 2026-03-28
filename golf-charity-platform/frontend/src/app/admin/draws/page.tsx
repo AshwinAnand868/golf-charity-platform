@@ -193,7 +193,7 @@ export default function AdminDrawsPage() {
                   {draw.drawnNumbers.length > 0 && (
                     <div className="flex gap-2 mb-4">
                       {draw.drawnNumbers.map((n) => (
-                        <div key={n} className="w-10 h-10 rounded-full bg-brand-500/15 border border-brand-500/25 flex items-center justify-center font-bold text-brand-300 text-sm">
+                        <div key={n} className="w-10 h-10 rounded-full bg-brand-500/10 border border-brand-500/20 flex items-center justify-center font-bold text-brand-300 text-sm">
                           {n}
                         </div>
                       ))}
@@ -207,7 +207,7 @@ export default function AdminDrawsPage() {
                       { label: '🥈 4-Match (35%)', val: draw.prizePool.fourMatch },
                       { label: '🥉 3-Match (25%)', val: draw.prizePool.threeMatch },
                     ].map(({ label, val }) => (
-                      <div key={label} className="p-3 rounded-xl bg-white/4 border border-white/8">
+                      <div key={label} className="p-3 rounded-xl bg-white/5 border border-white/10">
                         <div className="text-xs text-slate-400 mb-1">{label}</div>
                         <div className="font-semibold text-white">£{(val / 100).toFixed(2)}</div>
                       </div>
@@ -216,7 +216,7 @@ export default function AdminDrawsPage() {
 
                   {/* Winners summary */}
                   {draw.winners.length > 0 && (
-                    <div className="mt-4 pt-4 border-t border-white/8">
+                    <div className="mt-4 pt-4 border-t border-white/10">
                       <div className="text-xs text-slate-400 mb-2 font-medium">WINNERS</div>
                       <div className="space-y-1">
                         {draw.winners.map((w, i) => (

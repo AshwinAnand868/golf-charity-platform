@@ -91,7 +91,7 @@ export default function HomePage() {
               <div key={step} className="card group hover:border-brand-500/20 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-4 right-4 font-display text-6xl font-bold text-white/3">{step}</div>
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
-                  color === 'gold' ? 'bg-gold-500/15 text-gold-400' : 'bg-brand-500/15 text-brand-400'
+                  color === 'gold' ? 'bg-gold-500/10 text-gold-400' : 'bg-brand-500/10 text-brand-400'
                 }`}>
                   <Icon className="w-6 h-6" />
                 </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/8 py-12 px-4 mt-12">
+      <footer className="border-t border-white/10 py-12 px-4 mt-12">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">

@@ -127,7 +127,7 @@ export default function RegisterPage() {
               )}
             </div>
 
-            <div className="p-4 rounded-xl bg-brand-500/8 border border-brand-500/20">
+            <div className="p-4 rounded-xl bg-brand-500/10 border border-brand-500/20">
               <p className="text-sm text-brand-300 font-medium mb-2">
                 ✓ Selected plan: <span className="capitalize">{plan}</span>
               </p>

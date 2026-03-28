@@ -180,7 +180,7 @@ export default function AdminCharitiesPage() {
                     <button onClick={() => toggleFeatured(c._id)} className={`p-2 rounded-lg transition-colors ${c.featured ? 'text-gold-400 bg-gold-500/10' : 'text-slate-500 hover:text-gold-400 hover:bg-gold-500/10'}`} title="Toggle featured">
                       <Star className="w-4 h-4" />
                     </button>
-                    <button onClick={() => startEdit(c)} className="p-2 text-slate-400 hover:text-white hover:bg-white/8 rounded-lg transition-colors">
+                    <button onClick={() => startEdit(c)} className="p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
                       <Pencil className="w-4 h-4" />
                     </button>
                     <button onClick={() => deleteCharity(c._id)} className="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors">
